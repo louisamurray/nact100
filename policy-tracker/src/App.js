@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     const updatedItems = lists[currentList].map(item => ({
       ...item,
-      checked: item.checkedDate !== null, // Set checked to true if checkedDate is not null
+      checked: item.checkedDate !== null, 
     }));
     setItems(updatedItems);
   }, [currentList]);
@@ -58,12 +58,19 @@ function App() {
   };
 
   const toggleCheck = (id) => {
-    setItems(items.map(item => item.id === id ? { ...item, checked: !item.checked } : item));
+    // Find the item by id
+    const itemToToggle = items.find(item => item.id === id);
+    // If the item is already checked, return without updating the state
+    if (itemToToggle.checked) {
+      return;
+    }
+    // Otherwise, toggle the checked state for the item and update the state
+    setItems(items.map(item => item.id === id ? { ...item, checked: true } : item));
   };
 
   return (
     <div className="App">
-      <h1>Plans Checklist</h1>
+      <h1>Pre-Election 100 Day Plans Checklist</h1>
       <div>
         {!isPastDeadline ? (
           <p>
@@ -89,7 +96,7 @@ function App() {
             id={item.id}
             checked={item.checked}
             onChange={() => toggleCheck(item.id)}
-            disabled={isPastDeadline}
+            disabled={isPastDeadline || item.checked}
           />
           <label htmlFor={item.id}>
             <span style={{ textDecoration: item.checked ? 'line-through' : 'none' }}>
