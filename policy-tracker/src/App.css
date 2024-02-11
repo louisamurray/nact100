@@ -1,38 +1,142 @@
+body, h1, h2, h3, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 0;
+}
+
 .App {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p, ul, ol {
+  margin: 10px 0;
+  text-align: left;
 }
 
+/* Lists */
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  line-height: 1.5;
+}
+
+/* Alternating List Item Backgrounds */
+li:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+li:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+/* Header */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #005a87;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo */
+.App-logo {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/* Links */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-link:hover {
+  color: #4095c6;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2em;
   }
+}
+
+/* New CSS for aligning text in specific sections */
+/* Align intro section text center */
+.App > div:first-of-type, .App > p, .App > h1 {
+  text-align: center;
+}
+
+/* Ensure list items and buttons are aligned left */
+.App div:not(:first-of-type), .App button, .App div:not(:first-of-type) label {
+  text-align: left;
+}
+
+/* Additional styling for list items */
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.list-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.list-item label {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }

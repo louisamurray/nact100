@@ -15,6 +15,6 @@ const actPlans = [
     { id: 'nullifyLiveAnimalExportBans', text: 'Nullify changes to live animal export bans', checkedDate: null },
     { id: 'nullifyCrownPastoralLeaseReforms', text: 'Nullify the anti-property right Crown Pastoral Lease reforms', checkedDate: null },
     { id: 'orangaTamarikiSection7AA', text: 'Oranga Tamariki - Section 7AA, says it’s more important a child is placed with its iwi than anything else, it would go.', checkedDate: null },
-  ];
-  
-  export default actPlans;
+];
+
+export { actPlans };
