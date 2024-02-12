@@ -109,6 +109,7 @@ function App() {
       <p>Day 1 of our countdown begins on 23 November 2023. In our tracking, we consider only working days, excluding nationwide public holidays to give a true reflection of the parties' efforts to fulfil their pledges. Tasks are checked off as achieved only when they meet specific criteria—passing bills in Parliament, enforcing bans, signing Memorandums of Understanding (MoUs), or other relevant actions.</p>
       <p>Scores are based on the number of items checked off the list. No weighting has been applied.</p>
       <p>Our aim is to provide a clear, accountable record of political promises versus actions. <br></br>Stay informed on how each party is progressing with their commitments to the people of New Zealand.</p>
+      <p style={{ fontStyle: 'italic' }}>Think we've missed something? Email us at <a href="mailto:infiniteingenuity1@gmail.com">infiniteingenuity1@gmail.com</a></p>
       <div>
   {!isPastDeadline ? (
     <h2>
